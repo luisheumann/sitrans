@@ -17,3 +17,8 @@ Route::get('/', function () {
 Route::get('/hola/mundo', function () {
     return "esto es test 1";
 });
+
+
+Route::get('/nueva', function () {
+    return "ruta creada";
+});
