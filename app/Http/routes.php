@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hola/mundo', function () {
+Routendo', function () {
     return "esto es test 1";
 });
 
