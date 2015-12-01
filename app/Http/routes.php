@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/hola/mundo', function () {
-    return "hola2333";
+    return "esto es test 1";
 });
