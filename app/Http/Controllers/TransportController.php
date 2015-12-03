@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Api\V1;
+<?php namespace App\Http\Controllers;
 
 use App\Models\transport;
 use App\Models\model;
