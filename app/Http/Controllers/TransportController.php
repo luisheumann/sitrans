@@ -2,6 +2,7 @@
 
 use App\Models\Brand;
 use App\Models\Transport;
+use App\Models\Modelo;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class TransportController extends \App\Http\Controllers\Controller {
 	{
 
 		$Transports = Transport::first();
-	 	return view('transporte.default', ['Transports' => $Transports]);
+		$Modelos = Modelo::first();
+	 	return view('transporte.default', ['Transports' => $Transports, 'Modelos' => $Modelos]);
 	}
 
 

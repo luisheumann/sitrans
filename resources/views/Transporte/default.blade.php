@@ -1,5 +1,6 @@
 
 
 
-{{$Transports->usuario->name}}
+{{$Transports->usuario}}
 
+	

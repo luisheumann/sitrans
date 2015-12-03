@@ -4,13 +4,13 @@ use Illuminate\Database\Eloquent\Model;
 
 
 class Transport extends Model {
- protected $table = "transports";
+
 	protected $fillable = ['id','user_id', 'transport_type_id', 'brand_id'];
 	
 
 	public function marca()
 	{
-		return $this->belongsTo('App\Models\Brand', 'brand_id');
+		return $this->belongsTo('App\Models\BrandModelo', 'brand_modelo_id');
 	}
 
 	public function tipotrasporte() {
