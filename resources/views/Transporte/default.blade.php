@@ -1,5 +1,5 @@
 
 
 
-{{$Transports->marca->tipo}}
+{{$Transports->usuario->name}}
 
