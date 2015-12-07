@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('transporte', 'TransportController@index');
+
+
+
+Route::resource('usuario','UserController');
