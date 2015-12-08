@@ -13,6 +13,13 @@ use Toastr;
 class UserController extends Controller
 {
 
+
+    public function __construct()
+{
+    $this->middleware('sentry.member:Admins');
+}
+
+
    /** public function __construct()
 {
     $this->middleware('auth');

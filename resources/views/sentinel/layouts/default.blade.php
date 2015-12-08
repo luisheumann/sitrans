@@ -22,7 +22,13 @@
 		@section('styles')
 			body {
 				padding-top: 60px;
+				
+			
+
 			}
+
+
+
 		@show
 		</style>
 
