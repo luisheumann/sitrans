@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Mail;
 use Session;
 use Redirect;
-
+use Toastr;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -44,8 +44,11 @@ class MailController extends Controller
 
             $msj->subject('Correo de contacto');
             $msj->to('www.tucacho.com@gmail.com');
+        $messages = "Mensaje Enviado";
+        Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-bottom-right']);
 
         });
+
         return Redirect::to('/contacto');
 
 

@@ -25,7 +25,7 @@ Usuarios
 
 				{!!Form::open(['route'=>'mail.store','method'=>'POST'])!!}
 				<div class="form-group">
-					{!!Form::label('Email','Email:')!!}
+					{!!Form::label('Nombre','Nombre:')!!}
 					{!!Form::text('name',null,['placeholder' => 'Nombre','class'=>'form-control'])!!}
 
 				</div>
