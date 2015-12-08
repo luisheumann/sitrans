@@ -133,7 +133,7 @@
                   <!-- The user image in the navbar-->
                   <img src="http://lorempixel.com/g/160/160/" class="user-image" alt="User Image">
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">{{Sentry::getUser()->email}}</span>
+                  <span class="hidden-xs"></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
