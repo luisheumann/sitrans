@@ -23,4 +23,8 @@ Route::resource('usuario','UserController');
 
 
 Route::resource('login','LoginController');
+Route::get('logout', 'LoginController@logout');
+
+
 Route::get('transporte', 'TransportController@index');
+
