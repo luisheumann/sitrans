@@ -22,5 +22,15 @@ Route::get('/', function () {
 Route::resource('usuario','UserController');
 
 
-Route::resource('login','LoginController');
+//Route::resource('login','LoginController');
 Route::get('transporte', 'TransportController@index');
+
+Route::get('/', array('as' => 'home', function()
+{
+    return View::make('welcome');
+}));
+
+
+
+
+

@@ -147,6 +147,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
        
         'Kamaln7\Toastr\ToastrServiceProvider',
+        Sentinel\SentinelServiceProvider::class, 
       
      
 

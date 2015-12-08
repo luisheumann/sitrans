@@ -20,14 +20,31 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\VerifyCsrfToken::class,
     ];
 
+
+
     /**
      * The application's route middleware.
      *
      * @var array
      */
+   
+/*
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
     ];
+*/
+
+    protected $routeMiddleware = [
+    // ..
+    'sentry.auth' => \Sentinel\Middleware\SentryAuth::class,
+    'sentry.admin' => \Sentinel\Middleware\SentryAdminAccess::class,
+    'sentry.member' => \Sentinel\Middleware\SentryMember::class,
+    'sentry.guest' => \Sentinel\Middleware\SentryGuest::class,
+];
+
+
+
+
 }
