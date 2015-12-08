@@ -1,48 +1,49 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.frontend')
+    
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title')
+Inicio
+@endsection
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
+   @section('sidebar')
+          
+     @endsection
 
 
+    @section('content')
+    <style>
+.login-box-body, .register-box-body {
+margin-top: 20px;
+    width: 350 !important;
+    text-align: center;
+    margin: auto;
+  
+}
 
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+body{
+        background-color: slategray;
+        margin-top: 20px;
+}
+    </style>
+
+    {!! Toastr::render() !!}
+   <div class="login-box-body">
+    <p class="login-box-msg">Login</p>
+
+{!!Form::open(['route'=>'login.store', 'method'=>'POST'])!!}
+                    <div class="form-group">
+                        {!!Form::label('correo','Correo:')!!}   
+                        {!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
+                    </div>
+                    <div class="form-group">
+                        {!!Form::label('contrasena','Contraseña:')!!}   
+                        {!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña'])!!}
+                    </div>
+                    {!!Form::submit('Iniciar',['class'=>'btn btn-primary'])!!}
+                {!!Form::close()!!}
+   
+
+   
+
+  </div>
+    @endsection

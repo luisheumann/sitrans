@@ -19,7 +19,7 @@ Usuarios
 
 	@section('content')
 	{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
-		@include('usuario.forms.usr')
+		@include('admin.usuario.forms.usr')
 		{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
 	{!!Form::close()!!}
 	@endsection

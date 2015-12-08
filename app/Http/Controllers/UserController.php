@@ -12,6 +12,13 @@ use Toastr;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+{
+    $this->middleware('auth');
+}
+
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +32,7 @@ class UserController extends Controller
         $users = User::all();
 
 
-        return view('usuario.index',compact('users'));
+        return view('admin.usuario.index',compact('users'));
     }
 
     /**
@@ -35,7 +42,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('usuario.create');
+        return view('admin.usuario.create');
     }
 
     /**
@@ -49,8 +56,10 @@ class UserController extends Controller
         User::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'password' => $request['password'],
+            'password' => bcrypt($request['password']),
         ]);
+
+
          $messages = "Usuario Creado";
         Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-bottom-right']);
 
@@ -79,7 +88,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('usuario.edit',['user'=>$user]);
+        return view('admin.usuario.edit',['user'=>$user]);
     }
 
     /**

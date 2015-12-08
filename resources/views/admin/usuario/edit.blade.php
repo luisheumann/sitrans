@@ -19,7 +19,7 @@ Usuarios
 {!! Toastr::render() !!}
 	@section('content')
 		{!!Form::model($user,['route'=>['usuario.update',$user],'method'=>'PUT'])!!}
-			@include('usuario.forms.usr')
+			@include('admin.usuario.forms.usr')
 			{!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
 		{!!Form::close()!!}
 

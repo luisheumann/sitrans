@@ -16,8 +16,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('transporte', 'TransportController@index');
 
 
 
 Route::resource('usuario','UserController');
+
+
+Route::resource('login','LoginController');
+Route::get('transporte', 'TransportController@index');
