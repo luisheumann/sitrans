@@ -215,6 +215,12 @@
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
 
+
+       <li>
+                    <a href="transporte" id="add-pet"><i class="fa fa-truck"></i> <span class="nav-label">Transporte</span> </a>
+                </li>
+
+
             <li class="treeview">
                <a href="#"><i class="fa fa-user"></i> <span>Usuario</span> <i class="fa fa-angle-left pull-right"></i></a>
              @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))  
