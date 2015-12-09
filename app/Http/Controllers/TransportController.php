@@ -17,7 +17,7 @@ class TransportController extends Controller
 
     public function __construct()
 {
-    $this->middleware('sentry.member:Admins');
+    $this->middleware('sentry.member:Users');
 }
 
 

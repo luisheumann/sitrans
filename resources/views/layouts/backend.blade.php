@@ -220,10 +220,10 @@
                     <a href="transporte" id="add-pet"><i class="fa fa-truck"></i> <span class="nav-label">Transporte</span> </a>
                 </li>
 
-
+     @if (Sentry::check() && Sentry::getUser()->hasAccess('admin')) 
             <li class="treeview">
                <a href="#"><i class="fa fa-user"></i> <span>Usuario</span> <i class="fa fa-angle-left pull-right"></i></a>
-             @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))  
+         
               <ul class="treeview-menu">
                   <li {!! (Request::is('users*') ? 'class="active"' : '') !!}><a href="{{ action('\\Sentinel\Controllers\UserController@index') }}">Users</a></li>
                <li {!! (Request::is('groups*') ? 'class="active"' : '') !!}><a href="{{ action('\\Sentinel\Controllers\GroupController@index') }}">Groups</a></li>
