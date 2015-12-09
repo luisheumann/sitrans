@@ -8,7 +8,7 @@ Edit Profile
 
 {{-- Content --}}
 @section('content')
-
+{!! Toastr::render() !!}
 <?php
     // Pull the custom fields from config
     $isProfileUpdate = ($user->email == Sentry::getUser()->email);

@@ -8,6 +8,7 @@
 
 {{-- Content --}}
 @section('content')
+{!! Toastr::render() !!}
     <div class="row">
         <div class='page-header'>
             <div class='btn-toolbar pull-right'>

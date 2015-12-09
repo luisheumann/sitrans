@@ -7,12 +7,12 @@ Usuarios
 
    @section('sidebar')
           <h1>
-            Administar Usuario
-            <small>Crea/Modifica/Elimina</small>
+            Administar Transporte
+            <small></small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Usuario</li>
+            <li class="active">Transporte</li>
           </ol>
      @endsection
 
@@ -24,20 +24,20 @@ Usuarios
 
 	<div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Lista Usuarios</h3>
+              <h3 class="box-title">Lista Transportes</h3>
 
              
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <div class="table-responsive">
-              {!!link_to_route('usuario.create', $title = 'Crear', $parameters = null, $attributes = ['class'=>'btn pull-right btn-success btn-sm'])!!}
+              {!!link_to_route('transporte.create', $title = 'Crear', $parameters = null, $attributes = ['class'=>'btn pull-right btn-success btn-sm'])!!}
                 <table class="table no-margin">
                   <thead>
                   <tr>
                     <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Fecha</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
                     <th>Operacion</th>
                   </tr>
                   </thead>
@@ -45,13 +45,13 @@ Usuarios
                  
                  
 
-                 @foreach($users as $user)
+                 @foreach($transporte as $transport)
  					<tr>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->email}}</td>
-                    <td><span class="label label-success">{{$user->created_at}}</span></td>
+                    <td>{{$transport->nombre}}</td>
+                    <td>{{$transport->transport_type_id}}</td>
+                    <td><span class="label label-success">{{$transport->brand_modelo_id}}</span></td>
                     <td>
-                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     {!!link_to_route('transporte.edit', $title = 'Editar', $parameters = $transport, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>
                   </tr>
 

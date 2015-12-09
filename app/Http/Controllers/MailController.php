@@ -45,7 +45,9 @@ class MailController extends Controller
             $msj->subject('Correo de contacto');
             $msj->to('www.tucacho.com@gmail.com');
         $messages = "Mensaje Enviado";
-        Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-bottom-right']);
+        Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-top-center', 'progressBar'=>'true']);
+
+
 
         });
 

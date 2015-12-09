@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transport extends Model {
 
-	protected $fillable = ['id','user_id', 'transport_type_id', 'brand_id'];
+	protected $fillable = ['id','nombre','user_id', 'transport_type_id', 'brand_modelo_id'];
 	
 
 	public function marca()

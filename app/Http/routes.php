@@ -19,13 +19,9 @@ Route::get('/', function () {
 
 
 
-Route::resource('usuario','UserController');
+Route::resource('transporte','TransportController');
 Route::resource('mail','MailController');
 
-
-
-//Route::resource('login','LoginController');
-Route::get('transporte', 'TransportController@index');
 
 
 Route::get('/', array('as' => 'home', function()

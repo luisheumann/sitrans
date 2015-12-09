@@ -45,17 +45,22 @@ class LoginController extends Controller
         
     if(Auth::attempt(['email'=>$request['email'], 'password'=>$request['password']])){
          $messages = "Contraseña Correcta";
-        Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-bottom-right']);
+        Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-top-center', 'progressBar'=>'true']);
+
             return Redirect::to('usuario');
         }
 
-      $messages = "Contraseña Incorrecta";
-        Toastr::error($messages, $title = null, $options = ['positionClass'=>'toast-top-right']);
+
+     Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-top-center', 'progressBar'=>'true']);
+
         return Redirect::to('/');
     }
 
     public function logout(){
         Auth::logout();
+         $messages = "Deslogueo Satifactorio";
+         Toastr::success($messages, $title = null, $options = ['positionClass'=>'toast-top-center', 'progressBar'=>'true']);
+
         return Redirect::to('/');
     }
     /**

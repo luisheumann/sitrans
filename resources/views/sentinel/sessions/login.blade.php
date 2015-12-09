@@ -7,6 +7,7 @@ Log In
 
 {{-- Content --}}
 @section('content')
+{!! Toastr::render() !!}
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <form method="POST" action="{{ route('sentinel.session.store') }}" accept-charset="UTF-8">

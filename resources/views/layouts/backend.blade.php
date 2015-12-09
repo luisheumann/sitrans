@@ -22,9 +22,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>H</b>L</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
+          <span class="logo-lg"><b>HEUMA</b>NN</span>
         </a>
 
         <!-- Header Navbar -->
@@ -133,14 +133,18 @@
                   <!-- The user image in the navbar-->
                   <img src="http://lorempixel.com/g/160/160/" class="user-image" alt="User Image">
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs"></span>
+                  <span class="hidden-xs">@if (Sentry::check() )
+                {{Sentry::getUser()->first_name}}
+                 @endif</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <img src="http://lorempixel.com/g/160/160/" class="img-circle" alt="User Image">
                     <p>
-                      Alexander Pierce - Web Developer
+                     @if (Sentry::check() )
+                {{Sentry::getUser()->first_name}}
+                 @endif - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -187,7 +191,9 @@
               <img src="http://lorempixel.com/g/160/160/" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p>@if (Sentry::check() )
+                {{Sentry::getUser()->first_name}}
+                 @endif</p>
               <!-- Status -->
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -208,15 +214,20 @@
           <ul class="sidebar-menu">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-user"></i> <span>Usuario</span></a></li>
-          <!--  <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+
             <li class="treeview">
-              <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+               <a href="#"><i class="fa fa-user"></i> <span>Usuario</span> <i class="fa fa-angle-left pull-right"></i></a>
+             @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))  
               <ul class="treeview-menu">
-                <li><a href="#">Link in level 2</a></li>
-                <li><a href="#">Link in level 2</a></li>
+                  <li {!! (Request::is('users*') ? 'class="active"' : '') !!}><a href="{{ action('\\Sentinel\Controllers\UserController@index') }}">Users</a></li>
+               <li {!! (Request::is('groups*') ? 'class="active"' : '') !!}><a href="{{ action('\\Sentinel\Controllers\GroupController@index') }}">Groups</a></li>
               </ul>
-            </li>-->
+
+          
+             </li>
+            @endif
+
+
           </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->

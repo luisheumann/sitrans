@@ -8,6 +8,7 @@ Home
 
 {{-- Content --}}
 @section('content')
+{!! Toastr::render() !!}
 
     <?php
         // Determine the edit profile route
