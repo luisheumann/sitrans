@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1a5e005f0a2565f72752d8688fdcc93a",
-    "content-hash": "594fa836f571a229097fa19f7f587915",
+    "hash": "b62c9a7a63863dabcd4c7cb755839277",
+    "content-hash": "fe1e9d5c3c4f57562d9259bad6d0efb6",
     "packages": [
         {
             "name": "cartalyst/sentry",
@@ -1111,16 +1111,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.1.1",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "a208865a5aeffc2dbbef2a5b3409887272d93f32"
+                "reference": "d762ee5b099a29044603cd4649851e81aa66cb47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a208865a5aeffc2dbbef2a5b3409887272d93f32",
-                "reference": "a208865a5aeffc2dbbef2a5b3409887272d93f32",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/d762ee5b099a29044603cd4649851e81aa66cb47",
+                "reference": "d762ee5b099a29044603cd4649851e81aa66cb47",
                 "shasum": ""
             },
             "require": {
@@ -1155,7 +1155,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2015-12-01 02:52:15"
+            "time": "2015-12-10 14:48:13"
         },
         {
             "name": "psr/log",
@@ -2309,6 +2309,47 @@
     ],
     "packages-dev": [
         {
+            "name": "darsain/laravel-console",
+            "version": "dev-L5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teepluss/laravel-console.git",
+                "reference": "8df5717ede4dd6cdc8ff09b7d8ec04f968d1ebb9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/teepluss/laravel-console/zipball/8df5717ede4dd6cdc8ff09b7d8ec04f968d1ebb9",
+                "reference": "8df5717ede4dd6cdc8ff09b7d8ec04f968d1ebb9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0.1",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/controllers"
+                ],
+                "psr-0": {
+                    "Darsain\\Console\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Browser console for Laravel Framework.",
+            "keywords": [
+                "browser",
+                "console",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/teepluss/laravel-console/tree/L5"
+            },
+            "time": "2015-09-07 04:09:46"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
@@ -2987,16 +3028,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.19",
+            "version": "4.8.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b2caaf8947aba5e002d42126723e9d69795f32b4"
+                "reference": "7438c43bc2bbb2febe1723eb595b1c49283a26ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b2caaf8947aba5e002d42126723e9d69795f32b4",
-                "reference": "b2caaf8947aba5e002d42126723e9d69795f32b4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7438c43bc2bbb2febe1723eb595b1c49283a26ad",
+                "reference": "7438c43bc2bbb2febe1723eb595b1c49283a26ad",
                 "shasum": ""
             },
             "require": {
@@ -3005,7 +3046,7 @@
                 "ext-pcre": "*",
                 "ext-reflection": "*",
                 "ext-spl": "*",
-                "php": ">=5.3.3",
+                "php": "~5.3.3|~5.4|~5.5|~5.6",
                 "phpspec/prophecy": "^1.3.1",
                 "phpunit/php-code-coverage": "~2.1",
                 "phpunit/php-file-iterator": "~1.4",
@@ -3055,7 +3096,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-11-30 08:18:59"
+            "time": "2015-12-10 07:48:52"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3179,23 +3220,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828"
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5"
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "extra": {
@@ -3227,7 +3268,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-06 07:21:36"
+            "time": "2015-12-08 07:14:41"
         },
         {
             "name": "sebastian/environment",
@@ -3537,7 +3578,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oriceon/toastr-5-laravel": 20
+        "oriceon/toastr-5-laravel": 20,
+        "darsain/laravel-console": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

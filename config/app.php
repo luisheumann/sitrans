@@ -148,6 +148,7 @@ return [
        
         'Kamaln7\Toastr\ToastrServiceProvider',
         Sentinel\SentinelServiceProvider::class, 
+        'Darsain\Console\ConsoleServiceProvider',
       
      
 
