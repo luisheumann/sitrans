@@ -8,9 +8,9 @@ class Transport extends Model {
 	protected $fillable = ['id','nombre','user_id', 'transport_type_id', 'brand_modelo_id'];
 	
 
-	public function marca()
+	public function clase()
 	{
-		return $this->belongsTo('App\Models\BrandModelo', 'brand_modelo_id');
+		return $this->hasMany('App\Models\BrandModeloTransport');
 	}
 
 	public function tipotrasporte() {
@@ -21,6 +21,13 @@ class Transport extends Model {
 	public function usuario(){
 		return $this->belongsTo('App\User', 'user_id');
 	}
+
+public function repuesto()
+    {
+        return $this->hasMany('App\Models\Part');
+    }
+	
+
 
 
 

@@ -8,6 +8,8 @@ use App\User;
 use Session;
 use Redirect;
 use Toastr;
+use App\Models\Part;
+use App\Models\BrandModeloTransport;
 
 
 
@@ -36,6 +38,7 @@ class TransportController extends Controller
     {
     
         $transporte = Transport::all();
+    
 
 
         return view('admin.transporte.index',compact('transporte'));

@@ -35,9 +35,11 @@ Usuarios
                 <table class="table no-margin">
                   <thead>
                   <tr>
+                   <th>usuario</th>
                     <th>Nombre</th>
                     <th>Marca</th>
                     <th>Modelo</th>
+                    <th>Repuestos</th>
                     <th>Operacion</th>
                   </tr>
                   </thead>
@@ -47,9 +49,27 @@ Usuarios
 
                  @foreach($transporte as $transport)
  					<tr>
+            <td>{{$transport->usuario->username}}</td>
                     <td>{{$transport->nombre}}</td>
-                    <td>{{$transport->transport_type_id}}</td>
-                    <td><span class="label label-success">{{$transport->brand_modelo_id}}</span></td>
+                    <td>
+                        @foreach ($transport->clase as $marca)
+                         {{$marca->marcatipo->tipo}}
+                         @endforeach
+                   </td>
+                    <td>
+
+                       @foreach ($transport->clase as $modelo)
+                         {{$modelo->modelotipo->tipo}}
+                         @endforeach
+
+                  </td>
+                    <td>
+                        @if (!$transporte == null)
+                      @foreach ($transport->repuesto as $repuesto)
+                     {{$repuesto->nombre}} <br>
+                      @endforeach
+                      @endif
+                    </td>
                     <td>
                      {!!link_to_route('transporte.edit', $title = 'Editar', $parameters = $transport, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>

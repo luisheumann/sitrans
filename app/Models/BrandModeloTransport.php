@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class BrandModelo extends Model {
+class BrandModeloTransport extends Model {
 
 
 	protected $fillable = ['id', 'brand_id', 'modelo_id'];
