@@ -23,4 +23,10 @@ transporte
 		@include('admin.transporte.forms.usr')
 		{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
 	{!!Form::close()!!}
-	@endsection
+
+
+
+  @include('admin.transporte.busqueda');
+
+  
+	@endsection  

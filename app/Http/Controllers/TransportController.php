@@ -51,8 +51,13 @@ class TransportController extends Controller
      */
     public function create()
     {
-        return view('admin.transporte.create');
+
+        $busqueda = Transport::all();
+       return view('admin.transporte.create',compact('busqueda'));
     }
+
+
+
 
     /**
      * Store a newly created resource in storage.

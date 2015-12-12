@@ -149,6 +149,7 @@ return [
         'Kamaln7\Toastr\ToastrServiceProvider',
         Sentinel\SentinelServiceProvider::class, 
         'Darsain\Console\ConsoleServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
       
      
 
@@ -203,6 +204,7 @@ return [
          'Form' => Collective\Html\FormFacade::class,
       'Html' => Collective\Html\HtmlFacade::class,
        'Toastr' => 'Kamaln7\Toastr\Facades\Toastr',
+       'Debugbar' => Barryvdh\Debugbar\Facade::class,
       
   
 
