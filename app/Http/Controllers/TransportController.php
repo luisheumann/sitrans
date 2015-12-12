@@ -51,9 +51,13 @@ class TransportController extends Controller
      */
     public function create()
     {
-
-        $busqueda = Transport::all();
-       return view('admin.transporte.create',compact('busqueda'));
+$search = \Request::get('search'); 
+ 
+    $busquedas = Transport::where('nombre','like','%'.$search.'%')
+        ->orderBy('nombre')
+        ->paginate(20);
+ 
+       return view('admin.transporte.create',compact('busquedas'));
     }
 
 

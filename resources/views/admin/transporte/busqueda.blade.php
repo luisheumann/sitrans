@@ -1,4 +1,4 @@
-{!! Form::open(['method'=>'GET','url'=>'busqueda','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+{!! Form::open(['method'=>'GET','url'=>'transporte/create','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
 
  
 {!!Form::text('search',null,['class'=>'form-control','placeholder'=>'Ingresa de la busqueda'])!!}
